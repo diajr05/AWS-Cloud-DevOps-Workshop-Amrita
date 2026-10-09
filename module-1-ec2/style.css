@@ -1,58 +1,174 @@
+/* General Page Styling */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
+/* Main Resume Container */
 .container {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 50px;
+    max-width: 850px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Section */
 header {
-	text-align: center;
-	margin-bottom: 50px;
+    background-color: #17365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
 }
 
-h1 {
-	font-size: 36px;
-	margin: 0;
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-p {
-	font-size: 18px;
-	margin: 0;
+header p {
+    font-size: 15px;
+    margin: 8px 0 0;
 }
 
+/* Section Styling */
 section {
-	margin-bottom: 50px;
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    background-color: #ffffff;
+    border-left: 4px solid #2878b5;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
+/* Section Headings */
+section h2 {
+    color: #17365d;
+    font-size: 22px;
+    border-bottom: 2px solid #dce6f1;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
+/* Subheadings */
+section h3 {
+    color: #2878b5;
+    font-size: 17px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* Paragraphs */
+section p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 8px 0;
+}
+
+/* Skills and Other Lists */
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    padding-left: 22px;
 }
 
 li {
-	display: inline-block;
-	margin-right: 10px;
-	font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 7px;
 }
 
-h3 {
-	font-size: 20px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+/* Skills List */
+section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-left: 20px;
 }
 
-p {
-	font-size: 18px;
-	line-height: 1.5;
+/* Project Section */
+#projects h3 {
+    background-color: #eaf2f8;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #2878b5;
+}
+
+#projects p {
+    margin-bottom: 12px;
+}
+
+/* Bold Text */
+strong {
+    color: #17365d;
+}
+
+/* Hover Effect */
+section:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header {
+        padding: 22px 12px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    section:nth-of-type(2) ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styling */
+@media print {
+    body {
+        background-color: #ffffff;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    section {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    header {
+        background-color: #17365d !important;
+        color: #ffffff !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
 }
